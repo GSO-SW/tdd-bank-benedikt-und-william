@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuechereiTests", "BuechereiTests\BuechereiTests.csproj", "{0F10B43C-3807-4F79-BD14-8AE7B6545EF3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1855046E-0705-4BB3-B9A4-D5AA966101F3} = {1855046E-0705-4BB3-B9A4-D5AA966101F3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buecherei", "Buecherei\Buecherei.csproj", "{1855046E-0705-4BB3-B9A4-D5AA966101F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F10B43C-3807-4F79-BD14-8AE7B6545EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F10B43C-3807-4F79-BD14-8AE7B6545EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F10B43C-3807-4F79-BD14-8AE7B6545EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F10B43C-3807-4F79-BD14-8AE7B6545EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1855046E-0705-4BB3-B9A4-D5AA966101F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1855046E-0705-4BB3-B9A4-D5AA966101F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1855046E-0705-4BB3-B9A4-D5AA966101F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1855046E-0705-4BB3-B9A4-D5AA966101F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B007F9D-8606-474B-8261-03316DAF3496}
+	EndGlobalSection
+EndGlobal
