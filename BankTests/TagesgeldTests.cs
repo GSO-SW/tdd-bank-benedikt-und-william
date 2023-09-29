@@ -19,83 +19,83 @@ namespace BankTests
             Assert.AreEqual(0.0, t.Zinssatz);
         }
 
-  //      [TestMethod]
-  //      public void Zinssatz_KannVeraendertWerden()
-  //      {
-  //          // Arrange
-  //          Tagesgeld t = new Tagesgeld(new Konto(0.0));
-  //          double neuerZinssatz = 1.0;
+        [TestMethod]
+        public void Zinssatz_KannVeraendertWerden()
+        {
+            // Arrange
+            Tagesgeld t = new Tagesgeld(new Konto(0.0));
+            double neuerZinssatz = 1.0;
 
-  //          // Act
-  //          double alterZinssatz = t.Zinssatz;
-  //          t.Zinssatz = neuerZinssatz;
+            // Act
+            double alterZinssatz = t.Zinssatz;
+            t.Zinssatz = neuerZinssatz;
 
-  //          // Assert
-  //          Assert.AreEqual(0.0, alterZinssatz);
-  //          Assert.AreEqual(neuerZinssatz, t.Zinssatz);
-  //      }
+            // Assert
+            Assert.AreEqual(0.0, alterZinssatz);
+            Assert.AreEqual(neuerZinssatz, t.Zinssatz);
+        }
 
-  //      [TestMethod]
-  //      public void Einzahlen_BetragKommtVonVerrechnungskonto()
-  //      {
-  //          // Arrange
-  //          double kontoStartguthaben = 100.00;
-  //          Konto konto = new Konto(kontoStartguthaben);
-  //          Tagesgeld t = new Tagesgeld(konto);
-  //          double einzahlungsBetrag = 70.00;
+        [TestMethod]
+        public void Einzahlen_BetragKommtVonVerrechnungskonto()
+        {
+            // Arrange
+            double kontoStartguthaben = 100.00;
+            Konto konto = new Konto(kontoStartguthaben);
+            Tagesgeld t = new Tagesgeld(konto);
+            double einzahlungsBetrag = 70.00;
 
-  //          // Act
-  //          t.Einzahlen(einzahlungsBetrag);
+            // Act
+            t.Einzahlen(einzahlungsBetrag);
 
-  //          // Assert
-  //          Assert.AreEqual(30.00, konto.Guthaben);
-  //          Assert.AreEqual(einzahlungsBetrag, t.Guthaben);
-  //      }
+            // Assert
+            Assert.AreEqual(30.00, konto.Guthaben);
+            Assert.AreEqual(einzahlungsBetrag, t.Guthaben);
+        }
 
 
-		//[TestMethod]
-  //      public void Auszahlen_BetragLandetAufVerrechnungskonto()
-  //      {
-  //          // Arrange
-  //          double kontoStartguthaben = 100.00;
-  //          Konto konto = new Konto(kontoStartguthaben);
-            
-  //          Tagesgeld t = new Tagesgeld(konto);
-  //          double einzahlungsBetrag = 70.00;
-		//	t.Einzahlen(einzahlungsBetrag);
+        [TestMethod]
+        public void Auszahlen_BetragLandetAufVerrechnungskonto()
+        {
+            // Arrange
+            double kontoStartguthaben = 100.00;
+            Konto konto = new Konto(kontoStartguthaben);
 
-  //          double auszahlungsBetrag = 30.00;
+            Tagesgeld t = new Tagesgeld(konto);
+            double einzahlungsBetrag = 70.00;
+            t.Einzahlen(einzahlungsBetrag);
 
-  //          // Act
-  //          t.Auszahlen(auszahlungsBetrag);
+            double auszahlungsBetrag = 30.00;
 
-  //          // Assert
-		//	Assert.AreEqual(60.00, konto.Guthaben);
-  //          Assert.AreEqual(40.00, t.Guthaben);
-  //      }
+            // Act
+            t.Auszahlen(auszahlungsBetrag);
 
-  //      [TestMethod]
-  //      [ExpectedException(typeof(ArgumentOutOfRangeException))]
-  //      public void Auszahlen_ZuGeringesGuthabenUnmoeglich()
-  //      {
-  //          // Arrange
-  //          double kontoStartguthaben = 100.00;
-  //          Konto konto = new Konto(kontoStartguthaben);
-            
-  //          Tagesgeld t = new Tagesgeld(konto);
-  //          double einzahlungsBetrag = 70.00;
-  //          t.Einzahlen(einzahlungsBetrag);
+            // Assert
+            Assert.AreEqual(60.00, konto.Guthaben);
+            Assert.AreEqual(40.00, t.Guthaben);
+        }
 
-  //          double auszahlungsBetrag = 80.00;
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void Auszahlen_ZuGeringesGuthabenUnmoeglich()
+        {
+            // Arrange
+            double kontoStartguthaben = 100.00;
+            Konto konto = new Konto(kontoStartguthaben);
 
-  //          // Act
-  //          t.Auszahlen(auszahlungsBetrag);
+            Tagesgeld t = new Tagesgeld(konto);
+            double einzahlungsBetrag = 70.00;
+            t.Einzahlen(einzahlungsBetrag);
 
-  //          // Assert
-  //          Assert.AreEqual(kontoStartguthaben, konto.Guthaben);
-  //          Assert.AreEqual(einzahlungsBetrag, t.Guthaben);
+            double auszahlungsBetrag = 80.00;
 
-  //      }
+            // Act
+            t.Auszahlen(auszahlungsBetrag);
+
+            // Assert
+            Assert.AreEqual(kontoStartguthaben, konto.Guthaben);
+            Assert.AreEqual(einzahlungsBetrag, t.Guthaben);
+
+        }
 
     }
 }

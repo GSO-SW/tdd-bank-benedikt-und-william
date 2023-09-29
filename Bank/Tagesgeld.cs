@@ -19,6 +19,11 @@ namespace Bank
             {
                 return zinssatz;
             }
+
+            set
+            {
+                zinssatz = value;
+            }
         }
 
         public int VerrechnungsKontoNr
