@@ -10,7 +10,7 @@ namespace Bank
     {
         private double guthaben;
         private Konto verrechnungskonto;
-        private int verrechnungsKontoNr;
+        private int verrechnungsKontoNr; // <-- Verbessern! ;)
         private double zinssatz;
 
         public double Zinssatz
